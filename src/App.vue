@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" @click="touchImg">
+    <!-- <index></index> -->
+    <test-panel></test-panel>
+    <test-toast ref="toast"></test-toast>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import index from './components/index.vue'
 
 export default {
   name: 'app',
+  data(){
+    return {
+      teatArr:[1,2,3]
+    }
+  },
+  methods:{
+    touchImg(){
+      this.$refs.toast.toastPlugin('toast起作用了',1000)
+    }
+
+  },
   components: {
-    HelloWorld
+    
+  },
+  created(){
+    this.$myMethod(this.teatArr)
   }
 }
 </script>
