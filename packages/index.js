@@ -1,5 +1,5 @@
-import testPanel from './src/panel'
-import testToast from './src/toast'
+import testPanel from './pannel/index.js'
+import testToast from './toast/index.js'
 const components = [testPanel, testToast]
 
 const install = function(Vue) {
